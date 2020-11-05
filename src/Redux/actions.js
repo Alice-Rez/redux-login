@@ -1,16 +1,8 @@
-export const ICR = "ICR";
-export const DCR = "DCR";
+export const CHANGE = "CHANGE";
 
-export function increment() {
+export default function changeCounter(value) {
   return {
-    type: ICR,
-    payload: 1,
-  };
-}
-
-export function decrement() {
-  return {
-    type: DCR,
-    payload: -1,
+    type: CHANGE,
+    payload: value,
   };
 }

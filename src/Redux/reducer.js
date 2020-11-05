@@ -4,9 +4,7 @@ const initialState = {
 
 const counterReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "ICR":
-      return { ...state, counter: state.counter + action.payload };
-    case "DCR":
+    case "CHANGE":
       return { ...state, counter: state.counter + action.payload };
     default:
       return state;
