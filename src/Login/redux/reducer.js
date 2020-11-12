@@ -16,7 +16,7 @@ const reducer = (state = initialState, action) => {
         (user) =>
           user.email === action.payload.email && user.pwd === action.payload.pwd
       );
-      if (logged.length < 1) {
+      if (logged.length > 0) {
         return {
           ...state,
           loggedUser: logged,
