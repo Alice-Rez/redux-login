@@ -1,8 +1,23 @@
-export const CHANGE = "CHANGE";
+const INPUT = "INPUT";
 
-export default function changeCounter(value) {
+const REVERSE = "REVERSE";
+
+const CLEAR = "CLEAR";
+
+export function getInput(value) {
   return {
-    type: CHANGE,
+    type: INPUT,
     payload: value,
+  };
+}
+
+export function reverseString() {
+  return {
+    type: REVERSE,
+  };
+}
+export function clearInput() {
+  return {
+    type: CLEAR,
   };
 }

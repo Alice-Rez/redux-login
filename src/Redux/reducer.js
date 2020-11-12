@@ -1,14 +1,20 @@
 const initialState = {
-  counter: 0,
+  input: "",
+  reversed: "",
 };
 
-const counterReducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case "CHANGE":
-      return { ...state, counter: state.counter + action.payload };
+    case "INPUT":
+      return { ...state, input: action.payload };
+    case "REVERSE":
+      let reversedString = state.input.split("").reverse().join("");
+      return { ...state, reversed: reversedString };
+    case "CLEAR":
+      return { ...state, input: "" };
     default:
       return state;
   }
 };
 
-export default counterReducer;
+export default reducer;

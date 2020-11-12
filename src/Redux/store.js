@@ -1,8 +1,8 @@
 import { createStore } from "redux";
-import counterReducer from "./reducer.js";
+import reducer from "./reducer.js";
 
 const myStore = createStore(
-  counterReducer,
+  reducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
