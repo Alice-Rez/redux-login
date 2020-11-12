@@ -1,5 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
-import { clearInput, getInput, reverseString } from "./Redux/actions";
+import {
+  clearInput,
+  getInput,
+  reverseString,
+} from "./ReverseWord/Redux/actions";
 
 function App() {
   const { input, reversed } = useSelector((state) => state);
